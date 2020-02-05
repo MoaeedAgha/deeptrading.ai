@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+	<title>About | Deep Trading</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+<body>
+
+
+<section class="headSec">
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+					<div class="logo">
+						<a href="index.php">
+							<img src="assets/images/logo.png">
+						</a>
+					</div>
+					<div id="nav-icon4">
+						  <span></span>
+						  <span></span>
+						  <span></span>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+					<div class="mainMenu">
+						<ul id="menu">
+							<li><a href="index.php">Home</a></li>
+							<li><a href="what-we-do.html">What We Do</a></li>
+							<li><a href="javascript:;">Products</a></li>
+							<li><a href="javascript:;">Pricing Plan</a></li>
+							<li><a href="our-story.html">Our Story</a></li>
+							<li class="active"><a href="about-us.html">About Us</a></li>
+							<li><a href="contact-us.html">Contact Us</a></li>
+							<li><a href="javascript:;">Sign Up</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</section>
+
+
+
+
+<div class="bodySec aboutSec">
+        <div class="container">
+            <h2><span>About Us</span></h2>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                    <div class="shadowImg">
+                        <img src="assets/images/about-img.png">
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+                    <div class="aboutTxtBg">
+                        <h3>Nektarios Kalogridis
+                            <span>Founder and CEO</span></h3>
+                            <p>Nektarios is a technology professional with more than twenty years of experience in Wall Street, who has successfully delivered highly complex trading systems and applications for the Investment Banking Industry. In addition, he has extensive experience and a proven track record for delivering Artificial Intelligence projects using Deep Learning that had a positive business impact. Throughout his professional career, Nekarios has held consulting positions with Morgan Stanley, Nomura, and Barclays Capital.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<section class="footerSec">
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+					<div class="copyTxt">
+						<p>&copy; 2020  DeepTrading.ai,  All Rights Reserved Logo &amp; Website crafted w/<i class="fa fa-heart"></i> by <a href="https://fullstop360.com/" target="_blank">FullStop</a></p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<div class="termLinks">
+						<a href="javascript:;">Privacy Policy</a>|
+						<a href="javascript:;">Terms &amp; Conditions</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</section>
+
+
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    if($('input[type="text"], textarea, select').val().length > 0 ){
+                $('fieldset').addClass('active');
+            }
+        $('.field input, .field textarea, .field select').blur(function()
+        {
+            if($(this).val() != ''){
+            $(this).closest('.field').find('fieldset').addClass('active');
+        } else {
+        
+             $(this).closest('.field').find('fieldset').removeClass('active');
+        }
+        
+    });
+    $('.field input, .field textarea, .field select').focusin(function()
+        {
+            $(this).closest('.field').find('fieldset').addClass('active');
+    });
+
+});
+</script>
+
+
+</body>
+</html>

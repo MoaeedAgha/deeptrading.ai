@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=0" />
+	<title>Contact Us | Deep Trading</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+	    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+</head>
+<body>
+
+
+<section class="headSec">
+	<header class="header">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3">
+					<div class="logo">
+                        <a href="index.php">
+                            <img src="assets/images/logo.png">
+                        </a>
+                    </div>
+                    <div id="nav-icon4">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                    </div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9">
+					<div class="mainMenu">
+						<ul id="menu">
+							<li><a href="index.php">Home</a></li>
+							<li><a href="what-we-do.html">What We Do</a></li>
+							<li><a href="javascript:;">Products</a></li>
+							<li><a href="javascript:;">Pricing Plan</a></li>
+							<li><a href="our-story.html">Our Story</a></li>
+							<li><a href="about-us.html">About Us</a></li>
+							<li class="active"><a href="contact-us.html">Contact Us</a></li>
+							<li><a href="javascript:;">Sign Up</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+</section>
+
+
+
+
+<div class="bodySec contactSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
+                    <div class="whatWeDoTxt">
+                        <h2><span>seng us a note</span></h2>
+                        <div class="contactForm">
+                            <form class="AnimationForm">
+                                <div class="field" data-aos="fade-up" data-aos-delay="100">
+                                    <input type="text" name="">
+                                    <fieldset>First Name <span>*</span></fieldset>
+                                </div>
+
+                                <div class="field"  data-aos="fade-up" data-aos-delay="200">
+                                    <input type="text" name="">
+                                    <fieldset>Last Name <span>*</span></fieldset>
+                                </div>
+
+                                <div class="field"  data-aos="fade-up" data-aos-delay="250">
+                                    <input type="email" name="">
+                                    <fieldset>Email Address<span>*</span></fieldset>
+                                </div>
+
+
+                                <div class="field"  data-aos="fade-up" data-aos-delay="300">
+                                    <input type="text" name="">
+                                    <fieldset>Phone Number</fieldset>
+                                </div>
+
+                                <div class="field textarea" data-aos="fade-up" data-aos-delay="400">
+                                    <textarea></textarea>
+                                    <fieldset>Your Message </fieldset>
+                                </div>
+                                <div class="field">
+                                    <input type="submit" value="Send Message" name="">
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="contactInfo">
+                        <h6>DeepTrading.ai</h6>
+                        <ul>
+                            <li><span>Call Us:</span><a href="tel:+7324230343">732-423-0343</a></li>
+                            <li><span>Email:</span><a href="mailto://info@deeptrading.ai">info@deeptrading.ai</a></li>
+                        </ul>
+                    </div>
+                    <div class="locationMap">
+                        <img src="assets/images/map-location.png">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+<section class="footerSec">
+	<footer class="footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+					<div class="copyTxt">
+						<p>&copy; 2020  DeepTrading.ai,  All Rights Reserved Logo &amp; Website crafted w/<i class="fa fa-heart"></i> by <a href="https://fullstop360.com/" target="_blank">FullStop</a></p>
+					</div>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4">
+					<div class="termLinks">
+						<a href="javascript:;">Privacy Policy</a>|
+						<a href="javascript:;">Terms &amp; Conditions</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</section>
+
+
+<script src="assets/js/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    if($('input[type="text"], textarea, select').val().length > 0 ){
+                $('fieldset').addClass('active');
+            }
+        $('.field input, .field textarea, .field select').blur(function()
+        {
+            if($(this).val() != ''){
+            $(this).closest('.field').find('fieldset').addClass('active');
+        } else {
+        
+             $(this).closest('.field').find('fieldset').removeClass('active');
+        }
+        
+    });
+    $('.field input, .field textarea, .field select').focusin(function()
+        {
+            $(this).closest('.field').find('fieldset').addClass('active');
+    });
+
+});
+</script>
+
+
+</body>
+</html>
