@@ -14,6 +14,13 @@
 </head>
 <body class="home">
 
+<div class="videoBg">
+	<video width="100%" height="100%" loop autoplay="true" autoplay controls="false">
+	  <source src="video/home.mp4" type="video/mp4">
+	</video>
+</div>
+
+
 <section class="headSec">
 	<header class="header">
 		<div class="container-fluid">
