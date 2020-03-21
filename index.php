@@ -14,9 +14,16 @@
 </head>
 <body class="home">
 
-<div class="videoBg">
-	<video width="100%" height="100%" loop autoplay="true" autoplay controls="false">
+<!--<div class="videoBg">
+	 <video width="1000" loop autoplay controls="false">
 	  <source src="video/home.mp4" type="video/mp4">
+	</video> 
+</div>-->
+
+
+<div id="myVideo">
+	<video autoplay muted loop id="Video">
+	  	<source src="video/home.mp4" type="video/mp4">
 	</video>
 </div>
 
@@ -233,6 +240,12 @@ function toogleDataSeries(e){
 
 }
 </script>
+
+
+<script>
+    document.getElementById('vid').play();
+</script>
+
 
 </body>
 </html>
