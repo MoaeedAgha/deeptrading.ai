@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
         <script type="text/javascript">
              var console = { log: function() {} };
         </script>
+        
     <![endif]-->
+    <?php include 'myjson.php'; ?>
 </head>
 <body class="home">
 
@@ -18,8 +21,8 @@
 	 <video width="1000" loop autoplay controls="false">
 	  <source src="video/home.mp4" type="video/mp4">
 	</video> 
-</div>-->
-
+</div>
+ -->
 
 <div id="myVideo">
 	<video autoplay muted loop id="Video">
@@ -28,6 +31,7 @@
 </div>
 
 
+ 
 <section class="headSec">
 	<header class="header">
 		<div class="container-fluid">
@@ -64,15 +68,13 @@
 </section>
 
 
-
-
 <div class="bodySec">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="homeTxt">
                         <h2>Deep Index
-                        <span>28,120</span></h2>
+                        <span>22,589</span></h2>
                         <h6>Next day predicted value of Dow Jones Industrial Average</h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
@@ -164,7 +166,7 @@ ini_set('user_agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0) Gecko/2010010
 //phpinfo();
 error_reporting(-1);
 ini_set('display_errors', 'On');
-$url = "http://www.nektron.com/djia_historical_predictions.json";
+$url = "http://fullstop360.co/websites/deeptrading/html/djia_historical_predictions.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
 $myArray = array();
@@ -174,7 +176,7 @@ foreach($json_data as $json_datkey => $json_dat){
     $m = date('m',strtotime($json_datkey));
     $d = date('j',strtotime($json_datkey));
     $close  =   $json_dat['Close'];
-    $pred   =   $json_dat['Prediction'];
+    $pred   =   $json_dat['Predictions'];
     $closemyArray[] = "[".$datastr.",".$close."]";
     if($y == "2019" && $m == "01"){
         $myArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$close.' }';
@@ -192,7 +194,7 @@ foreach($json_data as $json_datkey => $json_dat){
     $m = date('m',strtotime($json_datkey));
     $d = date('j',strtotime($json_datkey));
     $close  =   $json_dat['Close'];
-    $pred   =   $json_dat['Prediction'];
+    $pred   =   $json_dat['Predictions'];
     $predmyArray[] = "[".$datastr.",".$pred."]";
     if($y == "2019" && $m == "01"){
         $pmyArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$pred.' }';
@@ -245,6 +247,7 @@ function toogleDataSeries(e){
 <script>
     document.getElementById('vid').play();
 </script>
+
 
 
 </body>
