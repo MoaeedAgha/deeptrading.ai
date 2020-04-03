@@ -166,7 +166,7 @@ ini_set('user_agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0) Gecko/2010010
 //phpinfo();
 error_reporting(-1);
 ini_set('display_errors', 'On');
-$url = "http://fullstop360.co/websites/deeptrading/html/djia_historical_predictions.json";
+$url = "http://www.nektron.com/djia_historical_predictions.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
 $myArray = array();
