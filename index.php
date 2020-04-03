@@ -13,7 +13,7 @@
         </script>
         
     <![endif]-->
-    <?php include 'myjson.php'; ?>
+    
 </head>
 <body class="home">
 
