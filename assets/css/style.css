@@ -11,8 +11,12 @@
 /* {transition: all 0.5s ease-in;}*/
 
 body { background: #131827; font-weight: 400; font-family: 'Tw Cen MT'; font-style: normal; font-size: 15px; line-height: 30px; color: #5e5e5e; padding: 0; margin: 0px; position: relative; }
-body.home {background: #131827 url(../../video/poster.jpg) center top no-repeat; background-size: cover;}
-body.home:before {content: '';background-color: rgba(0,0,0,0.8);width: 100%;height: 100%;position: fixed; left: 0;right: 0;top: 0;bottom: 0;}
+/*body.home {background: #131827 url(../../video/poster.jpg) center top no-repeat; background-size: cover;}
+body.home:before {content: '';background-color: rgba(0,0,0,0.8);width: 100%;height: 100%;position: fixed;left: 0;right: 0;top: 0;bottom: 0;}*/
+
+body {background: #131827 url(../../video/poster.jpg) center top no-repeat; background-size: cover;}
+body:before {content: '';background-color: rgba(0,0,0,0.8);width: 100%;height: 100%;position: fixed;left: 0;right: 0;top: 0;bottom: 0;}
+
 p { font-weight: 300; font-family: 'Tw Cen MT'; font-style: normal; font-size: 15px; line-height: 30px; color: #5e5e5e; padding: 0; margin: 0px; }
 
 ul { list-style: none;margin: 0; padding: 0;  }
@@ -110,10 +114,10 @@ background: linear-gradient(to right,  rgba(245,131,18,1) 0%,rgba(245,181,27,1) 
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58312', endColorstr='#f5b51b',GradientType=1 ); }
 
 
-.shadowImg {text-align: right;margin-top: 50px;}
+.shadowImg {text-align: right;margin-top: 50px; position: relative; z-index: 2;}
 .shadowImg img {box-shadow: -25px 25px 0px #282d3a;position: relative;}
 .aboutSec h2 { text-align: left; margin-bottom: 40px; }
-.aboutTxtBg {background: #34a6e5 url(../images/about-body-logo.png) right top no-repeat; min-height: 535px;padding: 60px 50px 0 130px;margin-left: -100px;position: relative;z-index: -1;}
+.aboutTxtBg {background: #34a6e5 url(../images/about-body-logo.png) right top no-repeat; min-height: 535px;padding: 60px 50px 0 130px;margin-left: -100px;position: relative;z-index: 0;}
 .aboutTxtBg h3 { font-size: 26px; font-weight: 400; color: #fff; padding: 0px; margin: 0 0 20px 0; text-transform: uppercase; }
 .aboutTxtBg h3 span { font-size: 21px; color: #0c4361; display: block; }
 .aboutTxtBg p { font-size: 21px; font-weight: 400; color: #fff; padding: 0px; margin: 0px; line-height: 42px; }
