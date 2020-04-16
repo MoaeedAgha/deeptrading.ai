@@ -29,7 +29,7 @@ function createChart() {
 
     plotOptions: {
       series: {
-        compare: 'percent',
+        compare: 'value',
         showInNavigator: true
       }
     },
