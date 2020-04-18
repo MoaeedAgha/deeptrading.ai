@@ -10,6 +10,9 @@ function createChart() {
 
   Highcharts.stockChart('container', {
 
+	chart: {
+            type: 'areaspline'
+        },
     rangeSelector: {
       selected: 0
     },
