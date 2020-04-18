@@ -11,7 +11,7 @@ function createChart() {
   Highcharts.stockChart('container', {
 
     rangeSelector: {
-      selected: 4
+      selected: 0
     },
 
     yAxis: {
@@ -29,7 +29,7 @@ function createChart() {
 
     plotOptions: {
       series: {
-        compare: 'value',
+        compare: 'percent',
         showInNavigator: true
       }
     },
