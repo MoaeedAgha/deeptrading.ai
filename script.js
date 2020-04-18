@@ -1,4 +1,6 @@
-var seriesOptions = [],
+var seriesOptions = [{
+            type: 'areaspline'
+        }],
   seriesCounter = 0,
   names = ['CLOSE', 'PRED'];
 
@@ -9,10 +11,6 @@ var seriesOptions = [],
 function createChart() {
 
   Highcharts.stockChart('container', {
-
-	chart: {
-            type: 'areaspline'
-        },
     rangeSelector: {
       selected: 0
     },
