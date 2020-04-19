@@ -131,7 +131,7 @@ Highcharts.theme = {
                 }
             },
             marker: {
-                enabled: true,
+                enabled: false,
                 lineColor: '#333',
                 radius: 3
             }
