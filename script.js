@@ -44,9 +44,11 @@ function createChart() {
       valueDecimals: 2,
       split: true
     },
+
     credits: {
         enabled: false
     },
+
     series: seriesOptions
   });
 }
@@ -129,6 +131,7 @@ Highcharts.theme = {
                 }
             },
             marker: {
+                enabled: true,
                 lineColor: '#333'
             }
         },
