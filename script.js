@@ -75,7 +75,9 @@ Highcharts.theme = {
             color: '#E0E0E3',
             textTransform: 'uppercase',
             fontSize: '20px'
-        }
+        },
+
+        text: 'Prediction vs Close Price'
     },
     subtitle: {
         style: {
