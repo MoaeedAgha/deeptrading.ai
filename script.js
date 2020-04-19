@@ -147,7 +147,7 @@ Highcharts.theme = {
         }
     },
     legend: {
-        backgroundColor: '#282d3a',
+        backgroundColor: '#171c29',
         itemStyle: {
             color: '#E0E0E3'
         },
