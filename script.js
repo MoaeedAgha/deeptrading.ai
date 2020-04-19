@@ -132,7 +132,8 @@ Highcharts.theme = {
             },
             marker: {
                 enabled: true,
-                lineColor: '#333'
+                lineColor: '#333',
+                radius: 3
             }
         },
         boxplot: {
