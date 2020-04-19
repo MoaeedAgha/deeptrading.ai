@@ -44,7 +44,9 @@ function createChart() {
       valueDecimals: 2,
       split: true
     },
-
+    credits: {
+        enabled: false
+    },
     series: seriesOptions
   });
 }
