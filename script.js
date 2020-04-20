@@ -12,20 +12,21 @@ function createChart() {
 
   Highcharts.stockChart('container', {
 
-	chart: {
-            type: 'spline',
-            margin: [0, 0, 0, 0]
-        },
-    rangeSelector: {
-      selected: 0
-    },
+      chart: {
+          type: 'spline',
+          spacingTop: 20
+      },
 
-    title: {
-      text: 'Dow Jones Industrial Average',
-    },
-    subtitle: {
-        text: 'Prediction vs Close'
-    },
+      rangeSelector: {
+          selected: 0
+      },
+
+      title: {
+          text: 'Dow Jones Industrial Average',
+      },
+      subtitle: {
+          text: 'Prediction vs Close'
+      },
 
     yAxis: {
       labels: {
