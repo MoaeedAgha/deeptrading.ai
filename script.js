@@ -20,37 +20,35 @@ function createChart() {
 
       rangeSelector: {
           selected: 0,
-          rangeSelector: {
-              buttons: [
-                  {
-                      type: 'day',
-                      count: 7,
-                      text: '7d'
-                  },
-                  {
-                      type: 'month',
-                      count: 1,
-                      text: '1m'
-                  }, {
-                      type: 'month',
-                      count: 3,
-                      text: '3m'
-                  }, {
-                      type: 'month',
-                      count: 6,
-                      text: '6m'
-                  }, {
-                      type: 'ytd',
-                      text: 'YTD'
-                  }, {
-                      type: 'year',
-                      count: 1,
-                      text: '1y'
-                  }, {
-                      type: 'all',
-                      text: 'All'
-                  }]
-          }
+          buttons: [
+              {
+                  type: 'day',
+                  count: 7,
+                  text: '7d'
+              },
+              {
+                  type: 'month',
+                  count: 1,
+                  text: '1m'
+              }, {
+                  type: 'month',
+                  count: 3,
+                  text: '3m'
+              }, {
+                  type: 'month',
+                  count: 6,
+                  text: '6m'
+              }, {
+                  type: 'ytd',
+                  text: 'YTD'
+              }, {
+                  type: 'year',
+                  count: 1,
+                  text: '1y'
+              }, {
+                  type: 'all',
+                  text: 'All'
+              }]
       },
 
       title: {
