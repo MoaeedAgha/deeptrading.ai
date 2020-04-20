@@ -23,8 +23,8 @@ function createChart() {
           buttons: [
               {
                   type: 'day',
-                  count: 7,
-                  text: '7d'
+                  count: 10,
+                  text: '10d'
               },
               {
                   type: 'month',
