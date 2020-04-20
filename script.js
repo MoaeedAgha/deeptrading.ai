@@ -90,7 +90,7 @@ Highcharts.theme = {
     subtitle: {
         style: {
             color: '#E0E0E3',
-            fontSize: '14px'
+            fontSize: '16px'
             //textTransform: 'uppercase'
         }
     },
