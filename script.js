@@ -14,7 +14,7 @@ function createChart() {
 
       chart: {
           type: 'spline',
-          spacingTop: 20
+          spacingTop: 2
       },
 
       rangeSelector: {
