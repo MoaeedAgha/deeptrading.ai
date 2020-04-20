@@ -19,8 +19,9 @@ function createChart() {
       selected: 0
     },
 
-    text: 'Dow Jones Industrial Average',
-
+    title: {
+      text: 'Dow Jones Industrial Average',
+    },
     subtitle: {
         text: 'Prediction vs Close Price'
     },
