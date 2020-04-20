@@ -23,7 +23,7 @@ function createChart() {
       text: 'Dow Jones Industrial Average',
     },
     subtitle: {
-        text: 'Prediction vs Close Price'
+        text: 'Prediction vs Close'
     },
 
     yAxis: {
@@ -80,14 +80,14 @@ Highcharts.theme = {
     title: {
         style: {
             color: '#E0E0E3',
-            textTransform: 'uppercase',
+            //textTransform: 'uppercase',
             fontSize: '20px'
         }
     },
     subtitle: {
         style: {
             color: '#E0E0E3',
-            textTransform: 'uppercase'
+            //textTransform: 'uppercase'
         }
     },
     xAxis: {
