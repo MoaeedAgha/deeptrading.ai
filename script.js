@@ -14,12 +14,38 @@ function createChart() {
 
       chart: {
           type: 'spline',
-          spacingTop: 0,
-          spacingBottom: 0
+          spacingTop: 1,
+          spacingBottom: 1
       },
 
       rangeSelector: {
-          selected: 0
+          selected: 0,
+          rangeSelector: {
+              buttons: [{
+                  type: 'days',
+                  count: 7,
+                  text: '7d'
+              }, {
+                  type: 'months',
+                  count: 1,
+                  text: '1m'
+              }, {
+                  type: 'months',
+                  count: 3,
+                  text: '3m'
+              }, {
+                  type: 'months',
+                  count: 6,
+                  text: '6m'
+              }, {
+                  type: 'YTD',
+                  text: 'YTD'
+              }, {
+                  type: 'months',
+                  count: 12,
+                  text: '1y'
+              }]
+          }
       },
 
       title: {
