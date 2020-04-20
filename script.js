@@ -13,7 +13,8 @@ function createChart() {
   Highcharts.stockChart('container', {
 
 	chart: {
-            type: 'spline'
+            type: 'spline',
+            margin: [0, 0, 0, 0]
         },
     rangeSelector: {
       selected: 0
