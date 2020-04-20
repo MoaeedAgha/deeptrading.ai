@@ -14,37 +14,42 @@ function createChart() {
 
       chart: {
           type: 'spline',
-          spacingTop: 1,
-          spacingBottom: 1
+          spacingTop: 0,
+          spacingBottom: 0
       },
 
       rangeSelector: {
           selected: 0,
           rangeSelector: {
-              buttons: [{
-                  type: 'days',
-                  count: 7,
-                  text: '7d'
-              }, {
-                  type: 'months',
-                  count: 1,
-                  text: '1m'
-              }, {
-                  type: 'months',
-                  count: 3,
-                  text: '3m'
-              }, {
-                  type: 'months',
-                  count: 6,
-                  text: '6m'
-              }, {
-                  type: 'YTD',
-                  text: 'YTD'
-              }, {
-                  type: 'months',
-                  count: 12,
-                  text: '1y'
-              }]
+              buttons: [
+                  {
+                      type: 'day',
+                      count: 7,
+                      text: '7d'
+                  },
+                  {
+                      type: 'month',
+                      count: 1,
+                      text: '1m'
+                  }, {
+                      type: 'month',
+                      count: 3,
+                      text: '3m'
+                  }, {
+                      type: 'month',
+                      count: 6,
+                      text: '6m'
+                  }, {
+                      type: 'ytd',
+                      text: 'YTD'
+                  }, {
+                      type: 'year',
+                      count: 1,
+                      text: '1y'
+                  }, {
+                      type: 'all',
+                      text: 'All'
+                  }]
           }
       },
 
