@@ -15,8 +15,7 @@ function createChart() {
       chart: {
           type: 'spline',
           spacingTop: 0,
-          spacingBottom: 0,
-          marginTop: 0
+          spacingBottom: 0
       },
 
       rangeSelector: {
@@ -91,6 +90,7 @@ Highcharts.theme = {
     subtitle: {
         style: {
             color: '#E0E0E3',
+            fontSize: '14px'
             //textTransform: 'uppercase'
         }
     },
