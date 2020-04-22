@@ -27,6 +27,8 @@ fclose($fp);
 
 
 $pmyArray = array();
+$predmyArray = array();
+
 foreach($json_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
     $y = date('Y',strtotime($json_datkey));
