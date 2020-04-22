@@ -1,4 +1,49 @@
 
+<?php
+ini_set('user_agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0) Gecko/20100101 Firefox/9.0');
+
+//phpinfo();
+error_reporting(-1);
+ini_set('display_errors', 'On');
+$url = "http://www.nektron.com/djia_historical_predictions.json";
+$json = file_get_contents($url);
+$json_data = json_decode($json, true);
+$myArray = array();
+foreach($json_data as $json_datkey => $json_dat){
+    $datastr    =   strtotime($json_datkey)* 1000;
+    $y = date('Y',strtotime($json_datkey));
+    $m = date('m',strtotime($json_datkey));
+    $d = date('j',strtotime($json_datkey));
+    $close  =   $json_dat['Close'];
+    $pred   =   $json_dat['Predictions'];
+    $closemyArray[] = "[".$datastr.",".$close."]";
+    if($y == "2019" && $m == "01"){
+        $myArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$close.' }';
+    }
+}
+$fp = fopen('close.json', 'w');
+fwrite($fp, str_replace('"', "", json_encode($closemyArray, JSON_HEX_APOS)));
+fclose($fp);
+
+
+$pmyArray = array();
+foreach($json_data as $json_datkey => $json_dat){
+    $datastr    =   strtotime($json_datkey)* 1000;
+    $y = date('Y',strtotime($json_datkey));
+    $m = date('m',strtotime($json_datkey));
+    $d = date('j',strtotime($json_datkey));
+    $close  =   $json_dat['Close'];
+    $pred   =   $json_dat['Predictions'];
+    $predmyArray[] = "[".$datastr.",".$pred."]";
+    if($y == "2019" && $m == "01"){
+        $pmyArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$pred.' }';
+    }
+}
+$fp = fopen('pred.json', 'w');
+fwrite($fp, str_replace('"', "", json_encode($predmyArray, JSON_HEX_APOS)));
+fclose($fp);
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -160,50 +205,7 @@ var options = {
 		dockInsidePlotArea: true,
 		itemclick: toogleDataSeries
 	},
-	<?php 
-ini_set('user_agent', 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:9.0) Gecko/20100101 Firefox/9.0');
 
-//phpinfo();
-error_reporting(-1);
-ini_set('display_errors', 'On');
-$url = "http://www.nektron.com/djia_historical_predictions.json";
-$json = file_get_contents($url);
-$json_data = json_decode($json, true);
-$myArray = array();
-foreach($json_data as $json_datkey => $json_dat){
-    $datastr    =   strtotime($json_datkey)* 1000;
-    $y = date('Y',strtotime($json_datkey));
-    $m = date('m',strtotime($json_datkey));
-    $d = date('j',strtotime($json_datkey));
-    $close  =   $json_dat['Close'];
-    $pred   =   $json_dat['Predictions'];
-    $closemyArray[] = "[".$datastr.",".$close."]";
-    if($y == "2019" && $m == "01"){
-        $myArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$close.' }';
-    }
-}
-$fp = fopen('close.json', 'w');
-fwrite($fp, str_replace('"', "", json_encode($closemyArray, JSON_HEX_APOS)));
-fclose($fp);
-
-
-$pmyArray = array();
-foreach($json_data as $json_datkey => $json_dat){
-    $datastr    =   strtotime($json_datkey)* 1000;
-    $y = date('Y',strtotime($json_datkey));
-    $m = date('m',strtotime($json_datkey));
-    $d = date('j',strtotime($json_datkey));
-    $close  =   $json_dat['Close'];
-    $pred   =   $json_dat['Predictions'];
-    $predmyArray[] = "[".$datastr.",".$pred."]";
-    if($y == "2019" && $m == "01"){
-        $pmyArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$pred.' }';
-    }
-}
-$fp = fopen('pred.json', 'w');
-fwrite($fp, str_replace('"', "", json_encode($predmyArray, JSON_HEX_APOS)));
-fclose($fp);
-?>
 	data: [{
 		type: "line",
 		showInLegend: false,
