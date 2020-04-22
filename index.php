@@ -18,7 +18,6 @@ foreach($json_data as $json_datkey => $json_dat){
     $close  =   $json_dat['Close'];
     $pred   =   $json_dat['Predictions'];
     $deepIndex = $pred;
-    echo $deepIndex;
     $closemyArray[] = "[".$datastr.",".$close."]";
     if($y == "2019" && $m == "01"){
         $myArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$close.' }';
@@ -123,7 +122,7 @@ fclose($fp);
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="homeTxt">
                         <h2>Deep Index
-                        <span><?php $deepIndex ?> </span></h2>
+                        <span><?php echo $deepIndex; ?> </span></h2>
                         <h6>Next day predicted value of Dow Jones Industrial Average</h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
