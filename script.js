@@ -13,14 +13,19 @@ function createChart() {
   Highcharts.stockChart('container', {
 
       chart: {
-          type: 'spline',
+          type: 'line',
           spacingTop: 0,
           spacingBottom: 0
       },
 
       rangeSelector: {
-          selected: 0,
+          selected: 1,
           buttons: [
+               {
+                  type: 'day',
+                  count: 5,
+                  text: '5d'
+              },
               {
                   type: 'day',
                   count: 10,
@@ -61,7 +66,7 @@ function createChart() {
     yAxis: {
       labels: {
         formatter: function () {
-          return (this.value > 0 ? ' + ' : '') + this.value + '%';
+          return this.value //(this.value > 0 ? ' + ' : '') + this.value + '%';
         }
       },
       plotLines: [{
@@ -73,7 +78,7 @@ function createChart() {
 
     plotOptions: {
       series: {
-        compare: 'percent',
+        compare: 'price',
         showInNavigator: true
       }
     },
