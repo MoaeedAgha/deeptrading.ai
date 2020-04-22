@@ -37,7 +37,7 @@ foreach($json_data as $json_datkey => $json_dat){
     $close  =   $json_dat['Close'];
     $pred   =   $json_dat['Predictions'];
     $predmyArray[] = "[".$datastr.",".$pred."]";
-    $deepIndex = $pred
+    $deepIndex = $pred;
     if($y == "2019" && $m == "01"){
         $pmyArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$pred.' }';
     }
