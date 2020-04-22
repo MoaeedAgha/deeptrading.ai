@@ -74,7 +74,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="homeTxt">
                         <h2>Deep Index
-                        <span>22,589</span></h2>
+                        <span><?php end($pred) ?> </span></h2>
                         <h6>Next day predicted value of Dow Jones Industrial Average</h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
