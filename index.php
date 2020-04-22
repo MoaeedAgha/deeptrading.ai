@@ -28,7 +28,7 @@ fclose($fp);
 
 $pmyArray = array();
 $predmyArray = array();
-
+$deepIndex = 0
 foreach($json_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
     $y = date('Y',strtotime($json_datkey));
@@ -37,6 +37,7 @@ foreach($json_data as $json_datkey => $json_dat){
     $close  =   $json_dat['Close'];
     $pred   =   $json_dat['Predictions'];
     $predmyArray[] = "[".$datastr.",".$pred."]";
+    $deepIndex = $pred
     if($y == "2019" && $m == "01"){
         $pmyArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$pred.' }';
     }
@@ -121,7 +122,7 @@ fclose($fp);
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="homeTxt">
                         <h2>Deep Index
-                        <span><?php  $pmyArray[1000] ?> </span></h2>
+                        <span><?php $deepIndex ?> </span></h2>
                         <h6>Next day predicted value of Dow Jones Industrial Average</h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
