@@ -19,7 +19,7 @@ function createChart() {
       },
 
       rangeSelector: {
-          selected: 1,
+          selected: 2,
           buttons: [
                {
                   type: 'day',
