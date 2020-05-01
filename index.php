@@ -9,8 +9,8 @@ $url = "http://www.nektron.com/djia_historical_predictions.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
 $myArray = array();
-$deepIndex = json_data['deep_index'];
-$historical_data = json_data['historical_prices'];
+$deepIndex = $json_data['deep_index'];
+$historical_data = $json_data['historical_prices'];
 
 foreach($historical_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
