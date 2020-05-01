@@ -9,15 +9,17 @@ $url = "http://www.nektron.com/djia_historical_predictions.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
 $myArray = array();
-$deepIndex = 0;
-foreach($json_data as $json_datkey => $json_dat){
+$deepIndex = json_data['deep_index'];
+$historical_data = json_data['historical_prices'];
+
+foreach($historical_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
     $y = date('Y',strtotime($json_datkey));
     $m = date('m',strtotime($json_datkey));
     $d = date('j',strtotime($json_datkey));
     $close  =   $json_dat['Close'];
-    $pred   =   $json_dat['Predictions'];
-    $deepIndex = $pred;
+    $pred   =   $json_dat['Prediction'];
+    //$deepIndex = $pred;
     $closemyArray[] = "[".$datastr.",".$close."]";
     if($y == "2019" && $m == "01"){
         $myArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$close.' }';
