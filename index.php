@@ -29,16 +29,15 @@ $fp = fopen('close.json', 'w');
 fwrite($fp, str_replace('"', "", json_encode($closemyArray, JSON_HEX_APOS)));
 fclose($fp);
 
-
 $pmyArray = array();
 $predmyArray = array();
-foreach($json_data as $json_datkey => $json_dat){
+foreach($historical_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
     $y = date('Y',strtotime($json_datkey));
     $m = date('m',strtotime($json_datkey));
     $d = date('j',strtotime($json_datkey));
     $close  =   $json_dat['Close'];
-    $pred   =   $json_dat['Predictions'];
+    $pred   =   $json_dat['Prediction'];
     $predmyArray[] = "[".$datastr.",".$pred."]";
     if($y == "2019" && $m == "01"){
         $pmyArray[] = '{ x: new Date('.$y.', '.$m.', '.$d.'), y: '.$pred.' }';
