@@ -9,7 +9,7 @@ $url = "http://www.nektron.com/djia_historical_predictions.json";
 $json = file_get_contents($url);
 $json_data = json_decode($json, true);
 $myArray = array();
-$deepIndex = $json_data['deep_index'];
+$deepIndex = (int)$json_data['deep_index'];
 $historical_data = $json_data['historical_prices'];
 
 foreach($historical_data as $json_datkey => $json_dat){
@@ -123,7 +123,7 @@ fclose($fp);
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <div class="homeTxt">
                         <h2>Deep Index
-                        <span><?php echo $deepIndex; ?> </span></h2>
+                        <span><?php echo number_format($deepIndex); ?> </span></h2>
                         <h6>Next day predicted value of Dow Jones Industrial Average</h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
