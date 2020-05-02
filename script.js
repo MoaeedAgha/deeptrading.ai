@@ -69,6 +69,7 @@ function createChart() {
           return this.value //(this.value > 0 ? ' + ' : '') + this.value + '%';
         }
       },
+      allowDecimals:false,
       plotLines: [{
         value: 0,
         width: 2,
@@ -85,7 +86,7 @@ function createChart() {
 
     tooltip: {
       pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b><br/>',
-      valueDecimals: 2,
+      //valueDecimals: 2,
       split: true
     },
 
