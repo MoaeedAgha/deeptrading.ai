@@ -11,6 +11,7 @@ $json_data = json_decode($json, true);
 $myArray = array();
 $deepIndex = (int)$json_data['deep_index'];
 $historical_data = $json_data['historical_prices'];
+$deepIndexDate = (int)$json_data['date'];
 
 foreach($historical_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
@@ -124,7 +125,10 @@ fclose($fp);
                     <div class="homeTxt">
                         <h2>Deep Index
                         <span><?php echo number_format($deepIndex); ?> </span></h2>
-                        <h6>Next day predicted value of Dow Jones Industrial Average</h6>
+                        <h6>Predicted value of Dow Jones Industrial Average for <?php
+                        $d = strtotime($deepIndexDate);
+                        echo date('F j, Y',$d);
+                        ?> </h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
 
