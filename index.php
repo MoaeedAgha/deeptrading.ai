@@ -11,7 +11,7 @@ $json_data = json_decode($json, true);
 $myArray = array();
 $deepIndex = (int)$json_data['deep_index'];
 $historical_data = $json_data['historical_prices'];
-$deepIndexDate = (int)$json_data['date'];
+$deepIndexDate = $json_data['date'];
 
 foreach($historical_data as $json_datkey => $json_dat){
     $datastr    =   strtotime($json_datkey)* 1000;
