@@ -125,7 +125,7 @@ fclose($fp);
                     <div class="homeTxt">
                         <h2>Deep Index
                         <span><?php echo number_format($deepIndex); ?> </span></h2>
-                        <h6>Predicted value of Dow Jones Industrial Average for <?php
+                        <h6>Predicted close value of Dow Jones Industrial Average for <?php
                         $d = strtotime($deepIndexDate);
                         echo date('F j, Y',$d);
                         ?> </h6>
