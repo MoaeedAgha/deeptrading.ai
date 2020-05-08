@@ -127,7 +127,7 @@ fclose($fp);
                         <span><?php echo number_format($deepIndex); ?> </span></h2>
                         <h6>Predicted close value of Dow Jones Industrial Average for <?php
                         $d = strtotime($deepIndexDate);
-                        echo date('F j, Y',$d);
+                        echo date('F jth, Y',$d);
                         ?> </h6>
                         <div class="homeGraph">
                             <!-- <img src="assets/images/home-chart.png"> -->
