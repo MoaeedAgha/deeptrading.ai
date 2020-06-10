@@ -241,7 +241,7 @@ Highcharts.theme = {
             fill: '#505053',
             stroke: '#000000',
             style: {
-                color: '#CCC'
+                color: 'white'//'#CCC'
             },
             states: {
                 hover: {
