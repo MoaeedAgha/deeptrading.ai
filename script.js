@@ -239,9 +239,9 @@ Highcharts.theme = {
     rangeSelector: {
         buttonTheme: {
             fill: '#505053',
-            stroke: '#000000',
+            stroke: '#CCC',//'#000000',
             style: {
-                color: 'white'//'#CCC'
+                color: '#CCC'
             },
             states: {
                 hover: {
