@@ -113,7 +113,7 @@ fclose($fp);
 							<li class="active"><a href="index.php">Home</a></li>
 							<li><a href="what-we-do.html">What We Do</a></li>
 							<li><a href="javascript:;">Products</a></li>
-							<li><a href="javascript:;">Pricing Plan</a></li>
+							<li><a href="pricing-plan.html">Pricing Plan</a></li>
 							<li><a href="our-story.html">Our Story</a></li>
 							<li><a href="about-us.html">About Us</a></li>
 							<li><a href="contact-us.html">Contact Us</a></li>
