@@ -255,7 +255,7 @@ form.AnimationForm .signUpTabs .field:nth-last-child(2) { width: 100%; }
 form.AnimationForm .signUpTabs .field {    margin-bottom: 72px;}
 form.AnimationForm .signUpTabs .field [type="submit"] {cursor: pointer;border: 0px;display: block;width: 180px;text-align: center;font-size: 21px;font-weight: 400;color: #fff;padding: 0px 30px;float: right;font-family: 'Tw Cen MT';background: rgb(245,131,18);background: -moz-linear-gradient(left,  rgba(245,131,18,1) 0%, rgba(245,181,27,1) 99%);background: -webkit-linear-gradient(left,  rgba(245,131,18,1) 0%,rgba(245,181,27,1) 99%);background: linear-gradient(to right,  rgba(245,131,18,1) 0%,rgba(245,181,27,1) 99%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58312', endColorstr='#f5b51b',GradientType=1 );line-height: 55px;border-radius: 3px;}
 form.registration-form figcaption { display: none; } 
-.AnimationForm .field .input-error { border: 0; border-bottom: 2px solid #ff0000 !important; }
+/*.AnimationForm .field .input-error { border: 0; border-bottom: 2px solid #ff0000 !important; }*/
 form.AnimationForm .signUpTabs .field [type="submit"].btn-previous { margin-right: 20px; background: #44bcf6; }
 form.AnimationForm .signUpTabs .field.leftSubmit [type="submit"] { float: none; }
 
