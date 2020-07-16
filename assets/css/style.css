@@ -423,7 +423,7 @@ header.header .mainMenu ul li+li {margin-left: 0px; }
 form.AnimationForm.registration-form {margin-top: 0px;  }
 form.AnimationForm .signUpTabs .field {margin-bottom: 35px; }
 form.AnimationForm .field fieldset { font-size: 18px; }
-form.AnimationForm .signUpTabs .field [type="submit"] { font-size: 18px; width: auto; padding: 0 35px; text-transform: uppercase; }
+form.AnimationForm .signUpTabs .field [type="submit"] { font-size: 18px; width: auto; padding: 0 35px; text-transform: uppercase; line-height: 40px; }
 .thanksMsg h6 {font-size: 20px; text-align: center; line-height: 40px; }
 
 }
