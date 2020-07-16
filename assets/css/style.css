@@ -53,14 +53,7 @@ video::-webkit-media-controls {
 /*.videoBg { position: fixed; left: 0px; right: 0px; top:  0px; bottom: 0px; z-index: -1; width: 100%; height: 100%; }
 .videoBg video {width: 100%; height: 100%;}*/
 
-#myVideo  {
-        position: fixed;
-        right: 0;
-        left: 0;
-        top: 0px;
-        bottom: 0;
-          z-index:-1;
-        }
+#myVideo  { position: fixed; right: 0; left: 0; top: 0px; bottom: 0;   z-index:-1; }
 #myVideo video { width: 100%; }
         /*#myVideo:before {
         content:"";
@@ -90,7 +83,7 @@ header.header .mainMenu ul li:last-child:hover a  { background-color: transparen
 .header.fixed {background: rgba(21, 24, 41, 0.9);}
 
 .footerSec { margin-top: 80px; /*background-color: #131827;*/}
-.footerSec .footer {margin: 0 150px;padding: 35px 0px;border-top: 1px solid rgba(235, 235, 235, 0.2);}
+.footerSec .footer {margin: 0 150px;padding: 35px 0px;border-top: 1px solid rgba(235, 235, 235, 0.5);}
 .footerSec .footer p { font-size: 16px; font-weight: 400; color: #fff; }
 .footerSec .footer i { color: #ff0000; }
 .footerSec .footer .termLinks { text-align: right; }
@@ -178,7 +171,8 @@ form.AnimationForm .field:before {}
 form.AnimationForm .field:nth-child(2n) {margin-left: 50px; }
 form.AnimationForm .field fieldset {position: absolute;top: 10px;left: 30px;color: #fff;font-size: 21px;font-weight: 400;transform: translate3d(0, 0, 0);transition: all 0.5s ease-in-out;z-index: 1;}
 form.AnimationForm .field fieldset span { color: #ff0000; }
-form.AnimationForm .field input, form.AnimationForm .field select, form.AnimationForm .field textarea {z-index: 111;position:relative;background: transparent;width: 100%;padding: 15px 30px;margin: 0;font-size: 22px;font-weight: 500;color: #ffffff;border-bottom: 3px solid #3f424c;}
+form.AnimationForm .field input[type="password"], form.AnimationForm .field input, form.AnimationForm .field select, form.AnimationForm .field textarea {z-index: 111;position:relative;background: transparent;width: 100%;padding: 15px 30px;margin: 0;font-size: 22px;font-weight: 500;color: #ffffff;border-bottom: 3px solid #3f424c;}
+form.AnimationForm .field select option { color: #000 }
 form.AnimationForm .field input:faocus { outline: 0;}
 form.AnimationForm .field fieldset.active{z-index: 999;top:-20px;}
 form.AnimationForm .field.phone fieldset {left: 120px;}
@@ -198,10 +192,97 @@ form.AnimationForm .field [type="submit"] {cursor: pointer;border: 0px;display: 
 
 
 
+/* Pricing Page Styling
+------------------------------------*/
+.priceBox { border: 2px solid #3caadf; background-color: #131827; min-height: 515px; transition: 0.3s; margin-top: 50px; padding: 40px 20px;  }
+.priceBox:hover {box-shadow: 0px 7px 112.32px 4.68px rgba(57, 169, 210, 0.5);}
+.priceBox .pricingHeadSec { border-bottom: 2px solid #3f424c; padding-bottom: 20px; margin-bottom: 20px; }
+.priceBox .pricingHeadSec h2 { font-size: 35px; text-align: left; line-height: 25px; }
+.priceBox .pricingHeadSec p { font-size: 18px; color: #fff;}
+.priceBox .pricePermon {} 
+.priceBox .pricePermon ul { display: flex; justify-content: flex-start; align-items: center; } 
+.priceBox .pricePermon ul li { width: 33%;}
+.priceBox .pricePermon ul li h6 { font-size: 36px; font-weight: 400; color: #fff; padding: 0px; margin: 0px; font-family: 'Tw Cen MT'; } 
+.priceBox .pricePermon ul li p {font-size: 18px; font-weight: 400; color: #fff; text-transform: uppercase;} 
+.priceBox .pricePermon ul li:nth-child(2) { width: 45px; text-align: center; margin-right: 30px;}
+.priceBox .pricePermon ul li i { display: inline-block; width: 30px; height: 30px; background-color: #46cff7; border-radius: 50%; text-align: center; font-size: 17px; font-weight: 400; color: #ffffff; font-style: normal; }
+.priceBox .priceBoxList { margin-top: 30px; }
+.priceBox .priceBoxList ul { margin-bottom: 20px; }
+.priceBox .priceBoxList ul li {font-size: 18px;font-weight: 400;color: #fff;padding: 0 0 0 30px;margin: 0 0 5px 0;position: relative;}
+.priceBox .priceBoxList ul li:before {background: url(../images/check-with-circle.svg) left top no-repeat;width: 16px;height: 16px;position: absolute;left: 0px;top: 5px;content: '';}
+.priceBox .priceBoxList a { display: inline-block; line-height: 54px; border-radius: 3px; font-size: 18px; font-weight: 400; color: #fff; padding: 0 15px;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#44bcf7+0,3fbae3+100 */
+background: #44bcf7; /* Old browsers */
+background: -moz-linear-gradient(left, #44bcf7 0%, #3fbae3 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #44bcf7 0%,#3fbae3 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #44bcf7 0%,#3fbae3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#44bcf7', endColorstr='#3fbae3',GradientType=1 ); /* IE6-9 */}
+.priceBox .priceBoxList a + a { margin-left: 15px; 
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f58312+1,e7b42a+100 */
+background: #f58312; /* Old browsers */
+background: -moz-linear-gradient(left, #f58312 1%, #e7b42a 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, #f58312 1%,#e7b42a 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, #f58312 1%,#e7b42a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58312', endColorstr='#e7b42a',GradientType=1 ); /* IE6-9 */ }
+.entPriceBg { background-color: #3fbae4; margin-top: 50px; padding: 40px 20px; transition: 0.3s;}
+.entPriceBg:hover {box-shadow: 0px 7px 80px 4.68px rgba(57, 169, 210, 0.5);}
+.entPriceBg h2 { font-size: 36px; padding-bottom: 5px; border-bottom: 2px solid #89d5fa; text-align: left; margin-bottom: 30px; }
+.entPriceBg h2 span { color: #fff; }
+.entPriceBg ul {}
+.entPriceBg ul li {font-size: 18px;font-weight: 400;color: #fff;padding: 0 0 0 30px;margin: 0 0 0px 0;position: relative;}
+.entPriceBg ul li:before {background: url(../images/circle-check.svg) left top no-repeat;width: 16px;height: 16px;position: absolute;left: 0px;top: 6px;content: '';}
+.moreInfo { margin: 45px 0 0 0; }
+.moreInfo p { font-size: 18px; font-weight: 400; color: #fff; padding: 0px; margin: 0px; }
+.moreInfo p a { color: #46cff7; }
+.moreInfo p a:hover { color: #ffffff; }
+
+
+
+
+
+/* SignUp Page Styling
+------------------------------------*/
+.signUpTabs {}
+.signUpTabs h2 { margin-top: 60px; text-align: left; }
+.signUpTabs ul { background-color: #414d72; display: flex; justify-content: flex-start; align-items: center; width: fit-content; border-radius: 30px; margin: 60px 0; }
+.signUpTabs ul li { padding: 5px 60px; font-size: 16px; font-weight: 400; color: #ffffff; text-transform: uppercase; border-radius: 30px; margin: 0 5px; }
+.signUpTabs ul li:first-child { margin-left: 0px; }
+.signUpTabs ul li:last-child { margin-right: 0px; }
+.signUpTabs ul li.active, .signUpTabs ul li:hover { background-color: #44bcf6; }
+form.AnimationForm .signUpTabs .field,
+form.AnimationForm .signUpTabs .field:nth-last-child(1),
+form.AnimationForm .signUpTabs .field:nth-last-child(2) { width: 100%; }
+form.AnimationForm .signUpTabs .field {    margin-bottom: 72px;}
+form.AnimationForm .signUpTabs .field [type="submit"] {cursor: pointer;border: 0px;display: block;width: 180px;text-align: center;font-size: 21px;font-weight: 400;color: #fff;padding: 0px 30px;float: right;font-family: 'Tw Cen MT';background: rgb(245,131,18);background: -moz-linear-gradient(left,  rgba(245,131,18,1) 0%, rgba(245,181,27,1) 99%);background: -webkit-linear-gradient(left,  rgba(245,131,18,1) 0%,rgba(245,181,27,1) 99%);background: linear-gradient(to right,  rgba(245,131,18,1) 0%,rgba(245,181,27,1) 99%);filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f58312', endColorstr='#f5b51b',GradientType=1 );line-height: 55px;border-radius: 3px;}
+form.registration-form figcaption { display: none; } 
+.AnimationForm .field .input-error { border: 0; border-bottom: 2px solid #ff0000 !important; }
+form.AnimationForm .signUpTabs .field [type="submit"].btn-previous { margin-right: 20px; background: #44bcf6; }
+form.AnimationForm .signUpTabs .field.leftSubmit [type="submit"] { float: none; }
+
+.thanksMsg { min-height: 350px; display: flex; justify-content: center; align-items: center;  }
+.thanksMsg h6 { font-size: 22px; color: #fff; }
+
+
+
+/*-----CUSTOM CHECKBOX-------*/
+.customCheck { position: relative; padding-left: 35px; cursor: pointer; font-size: 21px; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; font-weight: 400; color: #fff; margin-top: 30px; }
+.customCheck input {position: absolute;opacity: 0;cursor: pointer;height: 0;width: 0;}
+.checkmark {position: absolute;top: 5px;left: 0;height: 20px;width: 20px;border: 2px solid #44bcf6;}
+.customCheck:hover input ~ .checkmark {}
+.customCheck input:checked ~ .checkmark {}
+.checkmark:after { content: ""; position: absolute; display: none;}
+.customCheck input:checked ~ .checkmark:after { display: block;}
+.customCheck .checkmark:after {left: 7px;top: 3px;width: 5px;height: 10px;border: solid white;border-width: 0 3px 3px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);}
+
+
+
+
+
+
 /* Responsive
 ------------------------------------*/
 @media only screen and (min-width: 1200px){
-	.container {    max-width: 1270px;}
+  .container {    max-width: 1270px;}
 
 }
 
